@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#FAF3FB"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="22dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Create Advert"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            android:textColor="#3F3A46"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Post Type"
+            android:textStyle="bold"
+            android:textColor="#3F3A46"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/typeSpinner"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:text="Category"
+            android:textStyle="bold"
+            android:textColor="#3F3A46"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <EditText
+            android:id="@+id/nameInput"
+            android:hint="Name"
+            android:textSize="17sp"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/phoneInput"
+            android:hint="Phone"
+            android:textSize="17sp"
+            android:inputType="phone"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/descriptionInput"
+            android:hint="Description"
+            android:textSize="17sp"
+            android:minLines="3"
+            android:gravity="top"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="95dp" />
+
+        <EditText
+            android:id="@+id/locationInput"
+            android:hint="Location"
+            android:textSize="17sp"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/selectImageBtn"
+            android:text="Upload Item Image"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:background="@drawable/button_purple"
+            android:layout_marginTop="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="54dp" />
+
+        <ImageView
+            android:id="@+id/previewImage"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_marginTop="14dp"
+            android:scaleType="centerInside"
+            android:src="@android:drawable/ic_menu_gallery" />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:text="Save Advert"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:background="@drawable/button_purple"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="54dp" />
+
+    </LinearLayout>
+
+</ScrollView>

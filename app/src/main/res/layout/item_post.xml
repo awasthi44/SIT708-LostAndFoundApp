@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="14dp"
+    android:background="@drawable/card_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/itemImage"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/itemTitle"
+        android:textSize="19sp"
+        android:textColor="#3F3A46"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/itemDetails"
+        android:textSize="15sp"
+        android:textColor="#444444"
+        android:lineSpacingExtra="2dp"
+        android:layout_marginTop="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/deleteBtn"
+        android:text="Remove Advert"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:background="@drawable/button_purple"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+</LinearLayout>
