@@ -9,12 +9,12 @@
 
     <TextView
         android:text="Lost and Found App"
-        android:textSize="27sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="#3F3A46"
         android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/addPostBtn"
@@ -22,19 +22,22 @@
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textStyle="bold"
+        android:textSize="16sp"
         android:background="@drawable/button_purple"
         android:layout_marginTop="28dp"
         android:layout_width="match_parent"
-        android:layout_height="54dp" />
+        android:layout_height="54dp"/>
 
     <EditText
         android:id="@+id/searchCategory"
         android:hint="Search category e.g. Keys"
-        android:textSize="18sp"
+        android:textSize="17sp"
+        android:background="#FFFFFF"
+        android:padding="12dp"
         android:singleLine="true"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="22dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/searchBtn"
@@ -42,10 +45,11 @@
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textStyle="bold"
+        android:textSize="16sp"
         android:background="@drawable/button_purple"
         android:layout_marginTop="14dp"
         android:layout_width="match_parent"
-        android:layout_height="54dp" />
+        android:layout_height="54dp"/>
 
     <Button
         android:id="@+id/showAllBtn"
@@ -53,10 +57,23 @@
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textStyle="bold"
+        android:textSize="16sp"
         android:background="@drawable/button_purple"
         android:layout_marginTop="12dp"
         android:layout_width="match_parent"
-        android:layout_height="54dp" />
+        android:layout_height="54dp"/>
+
+    <Button
+        android:id="@+id/showMapBtn"
+        android:text="Show On Map"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="@drawable/button_purple"
+        android:layout_marginTop="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"/>
 
     <ListView
         android:id="@+id/listView"
@@ -64,6 +81,6 @@
         android:divider="@android:color/transparent"
         android:dividerHeight="12dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"/>
 
 </LinearLayout>

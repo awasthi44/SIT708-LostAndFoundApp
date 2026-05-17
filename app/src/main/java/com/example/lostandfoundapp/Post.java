@@ -8,11 +8,13 @@ public class Post {
     String description;
     String category;
     String location;
+    double latitude;
+    double longitude;
     String dateTime;
     String imageUri;
 
     public Post(int id, String type, String name, String phone, String description,
-                String category, String location, String dateTime, String imageUri) {
+                String category, String location, double latitude, double longitude, String dateTime, String imageUri) {
         this.id = id;
         this.type = type;
         this.name = name;
@@ -20,6 +22,8 @@ public class Post {
         this.description = description;
         this.category = category;
         this.location = location;
+        this.latitude = latitude;
+        this.longitude = longitude;
         this.dateTime = dateTime;
         this.imageUri = imageUri;
     }

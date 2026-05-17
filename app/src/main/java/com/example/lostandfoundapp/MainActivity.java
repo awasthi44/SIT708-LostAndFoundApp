@@ -10,12 +10,16 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button addPostBtn, searchBtn, showAllBtn;
+    Button addPostBtn, searchBtn, showAllBtn, showMapBtn;
+
     EditText searchCategory;
+
     ListView listView;
 
     DBHelper dbHelper;
+
     ArrayList<Post> postList;
+
     PostAdapter adapter;
 
     @Override
@@ -24,9 +28,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         addPostBtn = findViewById(R.id.addPostBtn);
+
         searchBtn = findViewById(R.id.searchBtn);
+
         showAllBtn = findViewById(R.id.showAllBtn);
+
+        showMapBtn = findViewById(R.id.showMapBtn);
+
         searchCategory = findViewById(R.id.searchCategory);
+
         listView = findViewById(R.id.listView);
 
         dbHelper = new DBHelper(this);
@@ -34,36 +44,69 @@ public class MainActivity extends AppCompatActivity {
         loadPosts();
 
         addPostBtn.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, AddPostActivity.class));
+
+            startActivity(
+                    new Intent(
+                            MainActivity.this,
+                            AddPostActivity.class));
         });
 
         searchBtn.setOnClickListener(v -> {
-            String category = searchCategory.getText().toString().trim();
+
+            String category =
+                    searchCategory.getText().toString().trim();
 
             if (category.isEmpty()) {
-                Toast.makeText(this, "Enter category to search", Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(
+                        this,
+                        "Enter category to search",
+                        Toast.LENGTH_SHORT).show();
+
             } else {
-                postList = dbHelper.searchByCategory(category);
-                adapter = new PostAdapter(this, postList);
+
+                postList =
+                        dbHelper.searchByCategory(category);
+
+                adapter =
+                        new PostAdapter(this, postList);
+
                 listView.setAdapter(adapter);
             }
         });
 
         showAllBtn.setOnClickListener(v -> {
+
             searchCategory.setText("");
+
             loadPosts();
+        });
+
+        showMapBtn.setOnClickListener(v -> {
+
+            Intent intent =
+                    new Intent(
+                            MainActivity.this,
+                            MapActivity.class);
+
+            startActivity(intent);
         });
     }
 
     @Override
     protected void onResume() {
+
         super.onResume();
+
         loadPosts();
     }
 
     private void loadPosts() {
+
         postList = dbHelper.getAllPosts();
+
         adapter = new PostAdapter(this, postList);
+
         listView.setAdapter(adapter);
     }
 }
