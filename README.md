@@ -171,7 +171,8 @@ OR
 
 # 🎥 Demonstration Video
 
-👉 Add your YouTube or Panopto link here
+👉 https://deakin.au.panopto.com/Panopto/Pages/Viewer.aspx?id=1520d708-6d48-4308-971d-b44e000a6b14
+
 
 ---
 
